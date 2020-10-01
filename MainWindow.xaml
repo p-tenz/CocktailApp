@@ -7,31 +7,32 @@
         mc:Ignorable="d" Loaded="Window_Loaded"
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackPanel>
-            <Button x:Name="btnRandom" Grid.Row="0" Margin="20" Click="btnRandom_Click">Show Random Cocktail</Button>
-            <TextBlock x:Name="tbName" Margin="20" HorizontalAlignment="Center" FontSize="24" Text="Cocktailname" />
+        <Button x:Name="btnRandom" Grid.Row="0" Grid.Column="0" Margin="20" Click="btnRandom_Click">Show me antother Cocktail</Button>
+        <TextBlock x:Name="tbName" Grid.Row="0" Grid.Column="1" Margin="20" HorizontalAlignment="Center" FontSize="24" Text="Cocktailname" />
+
+        <Label FontWeight="Bold" Grid.Row="1" Grid.Column="0">Glass</Label>
+        <TextBlock x:Name="tbGlass" Grid.Row="1" Grid.Column="1" Margin="20" />
+
+        <Label FontWeight="Bold" Grid.Row="2" Grid.Column="0">Ingredients</Label>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <TextBlock x:Name="tbMeasures1" Margin="20" />
+            <TextBlock x:Name="tbIngredients1" Margin="20" />
         </StackPanel>
-        <StackPanel Grid.Row="1">
-            <StackPanel Orientation="Horizontal">
-                <Label>Glass</Label>
-                <TextBlock x:Name="tbGlass" Margin="20" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label>Ingredients</Label>
-                <TextBlock x:Name="tbMeasures1" Margin="20" />
-                <TextBlock x:Name="tbIngredients1" Margin="20" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label>Instructions</Label>
-                <TextBlock x:Name="tbInstructions" Margin="20" />
-            </StackPanel>
-        </StackPanel>
-        <Image Grid.Row="2" x:Name="imgThumb" Margin="20" />
+        
+        <Label FontWeight="Bold" Grid.Row="3" Grid.Column="0">Instructions</Label>
+        <TextBlock x:Name="tbInstructions" Grid.Row="3" Grid.Column="1" Margin="20" TextWrapping="Wrap" TextAlignment="Justify" />
+        
+        <Image x:Name="imgThumb" Grid.Row="4" Grid.Column="1" Margin="20" />
     </Grid>
 </Window>
