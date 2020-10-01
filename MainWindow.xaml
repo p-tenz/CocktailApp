@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CocktailApp"
         mc:Ignorable="d" Loaded="Window_Loaded"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Cocktail Recommender" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -17,8 +17,9 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        <Button x:Name="btnRandom" Grid.Row="0" Grid.Column="0" Margin="20" Click="btnRandom_Click">Show me antother Cocktail</Button>
+        <Button x:Name="btnRandom" Grid.Row="0" Grid.Column="0" Margin="20" Click="btnRandom_Click">Show me another Cocktail</Button>
         <TextBlock x:Name="tbName" Grid.Row="0" Grid.Column="1" Margin="20" HorizontalAlignment="Center" FontSize="24" Text="Cocktailname" />
 
         <Label FontWeight="Bold" Grid.Row="1" Grid.Column="0">Glass</Label>
@@ -34,5 +35,6 @@
         <TextBlock x:Name="tbInstructions" Grid.Row="3" Grid.Column="1" Margin="20" TextWrapping="Wrap" TextAlignment="Justify" />
         
         <Image x:Name="imgThumb" Grid.Row="4" Grid.Column="1" Margin="20" />
+        <Label Grid.Row="5" Grid.Column="0">Documentation of API: https://www.thecocktaildb.com/api.php</Label>
     </Grid>
 </Window>
